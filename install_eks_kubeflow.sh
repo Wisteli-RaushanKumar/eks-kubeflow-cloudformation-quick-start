@@ -3,12 +3,11 @@
 source ~/.bash_profile
 source ~/.bashrc
 
-export KUBEFLOW_RELEASE_VERSION=v1.6.1
-export AWS_RELEASE_VERSION=v1.6.1-aws-b1.0.0
+#export KUBEFLOW_RELEASE_VERSION=v1.6.1
+#export AWS_RELEASE_VERSION=v1.6.1-aws-b1.0.0
 
-git clone https://github.com/awslabs/kubeflow-manifests.git && cd kubeflow-manifests
-git checkout ${AWS_RELEASE_VERSION}
-git clone --branch ${KUBEFLOW_RELEASE_VERSION} https://github.com/kubeflow/manifests.git upstream
+git clone https://github.com/Wisteli-RaushanKumar/kubeflow-manifests.git && cd kubeflow-manifests
+git clone https://github.com/Wisteli-RaushanKumar/manifests.git upstream
 make install-tools
 alias python=python3.8
 cd deployments/vanilla/terraform
